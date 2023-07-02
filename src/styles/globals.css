@@ -2,9 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Three Circle Training Code */
 .App {
   text-align: center;
-  /* visibility: hidden; */
 }
 
 .App-header {
@@ -30,4 +30,37 @@
 
 .circle.blue {
   background-color: #51a0fd;
+}
+
+/* Image Reveal Effect Training Code */
+
+.main .container {
+  width: 1080px;
+  height: 100vh;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  visibility: hidden;
+}
+
+.img-container {
+  width: 1080px;
+  height: 960;
+  position: relative;
+  overflow: hidden;
+}
+
+.img-container::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  right: 0;
+  background-color: #fff;
+}
+
+.img-container img {
+  width: 1440px;
+  /* position: absolute; */
 }
