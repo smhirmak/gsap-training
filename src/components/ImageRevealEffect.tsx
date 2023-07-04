@@ -1,11 +1,9 @@
 import React, { useEffect, useRef } from 'react';
 import { gsap, Power2 } from 'gsap';
-import { CSSRulePlugin } from 'gsap/CSSRulePlugin';
 
 const ImageRevealEffect = () => {
   let container: any = useRef(null);
   let image: any = useRef(null);
-  // var imageReveal = CSSRulePlugin.getRule('.img-container:after');
 
   const tl = gsap.timeline();
 
@@ -22,7 +20,7 @@ const ImageRevealEffect = () => {
         ease: Power2.easeInOut
       })
       .from(image, 1.4, { scale: 1.7, ease: Power2.easeInOut, delay: -1.5 });
-  }, []);
+  }, [tl]);
   return (
     <section className="main">
       <div className="container" ref={(el) => (container = el)}>
